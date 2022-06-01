@@ -3,9 +3,13 @@
 ## 1 项目概述
 
 CherishTime1:
+
 wjceizo: 后端数据库的连接，技术选择：python + flask + mysql/sqlite
+
 agaogaolu:
+
 DaSheeep:
+
 
 ## 2 系统功能
 **功能图：**
