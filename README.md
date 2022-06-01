@@ -2,7 +2,16 @@
 
 ## 1 项目概述
 
+CherishTime1:
+wjceizo: 后端数据库的连接，技术选择：python + flask + mysql/sqlite
+agaogaolu:
+DaSheeep:
+
 ## 2 系统功能
+**功能图：**
+
+![modules.png](https://s2.loli.net/2022/06/01/RaLwVpqIchNSoD1.png)
+
 
 ### 2.1 登陆模块
 
@@ -61,3 +70,16 @@
 #### 2.5.2 学生反馈模块
 
 在被点名回答问题时，学生可以回答问题并反馈到教师端。
+
+
+
+## 3 功能图
+
+### 3.1 登录与注册ER图
+
+
+
+### 3.2签到与互动ER图
+
+![签到互动ER图.png](https://s2.loli.net/2022/06/01/kUVMBKd3YlbDWw7.png)
+
