@@ -4,7 +4,8 @@
 
 CherishTime1:
 
-wjceizo: 后端数据库的连接，技术选择：python + flask + mysql/sqlite
+wjceizo: 后端数据库的连接，主要负责签到与互动模块。
+技术选择：python + flask + mysql/sqlite
 
 agaogaolu:
 
