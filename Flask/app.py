@@ -10,5 +10,6 @@ def index():
 def index():
     return 'Welcome My Friend!'
 
+
 if __name__ == '__main__':
     app.run()
