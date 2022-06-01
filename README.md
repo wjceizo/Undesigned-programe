@@ -4,14 +4,22 @@
 
 CherishTime1:
 
+<<<<<<< HEAD
 wjceizo: 后端数据库的连接，技术选择：python + flask + mysql/sqlite
+=======
+wjceizo: 后端数据库的连接，主要负责签到与互动模块。
+技术选择：python + flask + mysql/sqlite
+>>>>>>> a307fd8ba5ba76cd1e6441fcd652d2e47a03f495
 
 agaogaolu:
 
 DaSheeep:
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a307fd8ba5ba76cd1e6441fcd652d2e47a03f495
 ## 2 系统功能
 **功能图：**
 
