@@ -3,9 +3,14 @@
 ## 1 项目概述
 
 CherishTime1:
+
 wjceizo: 后端数据库的连接，技术选择：python + flask + mysql/sqlite
+
 agaogaolu:
+
 DaSheeep:
+
+
 
 ## 2 系统功能
 **功能图：**
@@ -81,5 +86,5 @@ DaSheeep:
 
 ### 3.2签到与互动ER图
 
-![签到互动ER图.png](https://s2.loli.net/2022/06/01/kUVMBKd3YlbDWw7.png)
+![签到与互动ER图.png](https://s2.loli.net/2022/06/01/2Sp8zuRxmkEcOsH.png)
 
