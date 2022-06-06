@@ -7,7 +7,9 @@ CherishTime1:
 wjceizo: 后端数据库的连接，主要负责签到与互动模块。
 技术选择：python + flask + mysql/sqlite
 
-agaogaolu:
+agaogaolu:负责前端页面的制作
+
+技术选择：React+MUI
 
 DaSheeep:
 
@@ -28,7 +30,7 @@ DaSheeep:
 
 #### 2.1.2 用户登陆
 
-用户主要包括教师和学生，教师可以通过工号、密码来登陆教师账号，学生可以通过学号、密码来登陆学生账号。
+用户主要包括教师和学生，教师可以通过工号、密码来登陆教师账号，学生可以通过学号、密码来登陆学生账号。![$X8OAK0JK0LJ$ON%{D7CQLM](C:\Users\91511\Desktop\$X8OAK0JK0LJ$ON%{D7CQLM.png)
 
 ### 2.2 签到模块
 
