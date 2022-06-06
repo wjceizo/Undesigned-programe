@@ -9,7 +9,8 @@ wjceizo: 后端数据库的连接，主要负责签到与互动模块。
 
 agaogaolu:
 
-DaSheeep:
+DaSheeep:后端登录注册上传下载逻辑功能.
+技术选择：java + springboot + mysql
 
 
 
