@@ -96,4 +96,7 @@ DaSheeep:后端登录注册上传下载逻辑功能.
 
 ![签到1](https://user-images.githubusercontent.com/53281427/172158685-e24891c4-7388-4f4a-aad7-f7730cb5a11e.jpg)
 
+### 3.3学生年级老师ER图
+
+![sql_img.jpg](https://s2.loli.net/2022/06/06/f8mCsnVi1t5JIkM.jpg)
 
