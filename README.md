@@ -89,9 +89,11 @@ DaSheeep:后端登录注册上传下载逻辑功能.
 
 ### 3.1 登录与注册ER图
 
+![在线制图-](https://user-images.githubusercontent.com/53281427/172158714-0127ffe1-c7da-4e82-aad5-6bc6a09a4f5e.jpg)
 
 
 ### 3.2签到与互动ER图
 
-![签到与互动ER图.png](https://s2.loli.net/2022/06/01/2Sp8zuRxmkEcOsH.png)
+![签到1](https://user-images.githubusercontent.com/53281427/172158685-e24891c4-7388-4f4a-aad7-f7730cb5a11e.jpg)
+
 
