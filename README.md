@@ -2,7 +2,9 @@
 
 ## 1 项目概述
 
-CherishTime1:
+### 1.1 团队分工
+
+CherishTime1:文档撰写
 
 wjceizo: 后端数据库的连接，主要负责签到与互动模块。
 技术选择：python + flask + mysql/sqlite
