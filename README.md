@@ -31,7 +31,7 @@ DaSheeep:后端登录注册上传下载逻辑功能.
 
 #### 2.1.2 用户登陆
 
-用户主要包括教师和学生，教师可以通过工号、密码来登陆教师账号，学生可以通过学号、密码来登陆学生账号。![$X8OAK0JK0LJ$ON%{D7CQLM](C:\Users\91511\Desktop\$X8OAK0JK0LJ$ON%{D7CQLM.png)
+用户主要包括教师和学生，教师可以通过工号、密码来登陆教师账号，学生可以通过学号、密码来登陆学生账号。![$X8OAK0JK0LJ$ON%{D7CQLM](https://user-images.githubusercontent.com/37702975/172116911-0b012762-5860-4f2e-8d97-490d81b6af19.png)
 
 ### 2.2 签到模块
 
