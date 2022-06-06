@@ -7,11 +7,11 @@
 CherishTime1:文档撰写
 
 wjceizo: 后端数据库的连接，主要负责签到与互动模块。
-技术选择：python + flask + mysql/sqlite
+技术选择：Java+ SpringBoot+ MyBatisPlus + Mysql
 
 agaogaolu:负责前端页面的制作
 
-技术选择：React+MUI
+技术选择：Vue + ElementUI
 
 DaSheeep:后端登录注册上传下载逻辑功能.
 技术选择：java + springboot + mysql
