@@ -6,8 +6,8 @@
 
 CherishTime1:文档撰写
 
-wjceizo: 后端数据库的连接，主要负责签到与互动模块。
-技术选择：Java+ SpringBoot+ MyBatisPlus + Mysql
+wjceizo: 后端数据库的连接，主要负责签到与互动模块，教师上传图片识别到班级学生模块。
+技术选择：后端：Java+ SpringBoot+ MyBatisPlus + Mysql 识别模块：Python + Flask + Openvino
 
 agaogaolu:负责前端页面的制作
 
