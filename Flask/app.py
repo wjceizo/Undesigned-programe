@@ -1,52 +1,53 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import os
+from base64 import urlsafe_b64decode 
+from base64 import urlsafe_b64encode 
+import requests
+from flask import request
+import cv2
+from flask import jsonify
+from werkzeug.utils import secure_filename
+from tobase64 import tobase
 
 app = Flask(__name__)
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:Wjc112299@127.0.0.1:3306/webtest'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-db = SQLAlchemy(app)
-
-class Student(db.Model):  # 表名将会是 student
-    Stid = db.Column(db.Integer, primary_key=True) # 主键
-    Stu_id = db.Column(db.Integer)  # StudentId
-    Stu_name = db.Column(db.String(40))  # StudentName
-    Stu_class = db.Column(db.String(40)) # StudentClass
-    Stu_password = db.Column(db.String(200)) # StudentPassword
-
-class Teacher(db.Model):  # 表名将会是 teacher
-    Tid = db.Column(db.Integer, primary_key=True)  # 主键
-    Tea_id = db.Column(db.Integer)  # 主键
-    Tea_name = db.Column(db.String(40))  # TeacherName
-    Tea_class = db.Column(db.String(40))  # TeacherClass
-    Tea_password = db.Column(db.String(200)) # TeacherPassword
-
-class Signin(db.Model):  # 表名将会是 signin
-    Sid = db.Column(db.Integer, primary_key=True)  # 主键
-    sign_id = db.Column(db.DateTime)    # SignId
-    sign_time = db.Column(db.DateTime)  # SignTime
-    sign_status = db.Column(db.Integer) # SignStatus
-    Tea_id = db.Column(db.Integer)  # TeacherId
-    student_id = db.Column(db.Integer) # StudentId
-
-class Interaction(db.Model):  # 表名将会是 interaction
-    Iid = db.Column(db.Integer, primary_key=True)  # 主键
-    Int_id = db.Column(db.Integer)  # InteractionId
-    Int_time = db.Column(db.DateTime)   # InteractionTime
-    Int_status = db.Column(db.Integer)  # InteractionStatus
-    Tea_id = db.Column(db.String(200))  # TeacherId
-    student_id = db.Column(db.String(200)) # StudentId
-
-@app.route('/')
-def index():
-    return 'Welcome!'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:Wjc112299@127.0.0.1:3306/webtest'
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# db = SQLAlchemy(app)
 
 @app.route('/index')
 def index():
     return 'Welcome My Friend!'
+
+
+UPLOAD_PATH = os.path.join(os.path.dirname(__file__), 'images')
+@app.route('/predict', methods=['GET', 'POST'])
+def upload_pic():
+    # 来获取多个上传文件
+    imgs = request.files.getlist("file_imgs")
+    urls = []
+    # 上传文件夹如果不存在则创建
+    if not os.path.exists(UPLOAD_PATH):
+        os.mkdir(UPLOAD_PATH)
+
+    filename = secure_filename(imgs[0].filename)
+    print(filename)
+    imgs[0].save(os.path.join(UPLOAD_PATH, filename))
+    b = tobase('images/' + filename)
+    print(b)
     
+
+
+    respose = {
+        "code": 200,
+        "students": 5,
+        "img": b
+    }
+    return jsonify(respose)
+
+
 
 if __name__ == '__main__':
     app.run()
