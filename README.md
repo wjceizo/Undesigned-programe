@@ -24,6 +24,10 @@ DaSheeep:后端登录注册上传下载逻辑功能.
 
 ![modules.png](https://s2.loli.net/2022/06/01/RaLwVpqIchNSoD1.png)
 
+**系统架构图：**
+
+![1](https://user-images.githubusercontent.com/53281427/172431586-324332bb-0926-44e0-8889-c22a5ef0c0ff.png)
+
 
 ### 2.1 登陆模块
 
@@ -91,7 +95,7 @@ DaSheeep:后端登录注册上传下载逻辑功能.
 
 ### 3.1 登录与注册ER图
 
-![在线制图-](https://user-images.githubusercontent.com/53281427/172158714-0127ffe1-c7da-4e82-aad5-6bc6a09a4f5e.jpg)
+![在线制图- (1)](https://user-images.githubusercontent.com/53281427/172417526-218aa171-7c46-429d-8ddc-aaeabe6646c8.jpg)
 
 
 ### 3.2签到与互动ER图
