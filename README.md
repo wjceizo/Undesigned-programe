@@ -69,7 +69,7 @@ DaSheeep:后端登录注册上传下载逻辑功能.
 #### 2.2.1 签到发布
 
 在上课时，教师可以发布签到，发布签到可以自定义时间。
-![image](https://user-images.githubusercontent.com/37702975/172979597-2ef62580-3ce1-4490-b778-9226a0ab6d58.png)
+![image](https://user-images.githubusercontent.com/37702975/172980091-b1093810-149e-4ff3-949b-a42cca96633b.png)
 
 #### 2.2.2 学生签到
 
