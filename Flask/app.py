@@ -1,53 +1,32 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-import os
-from base64 import urlsafe_b64decode 
-from base64 import urlsafe_b64encode 
-import requests
-from flask import request
-import cv2
-from flask import jsonify
-from werkzeug.utils import secure_filename
-from tobase64 import tobase
+from flask import Flask,request,jsonify
+from person_dection import ssd_fimage_demo
+import base64
+import json
+import numpy as np
+import cv2 as cv
 
 app = Flask(__name__)
 
+ 
+def tocv2(besedata):
+    im_bytes = base64.b64decode(besedata)
+    im_arr = np.frombuffer(im_bytes, dtype=np.uint8)  # im_arr is one-dim Numpy array
+    img = cv.imdecode(im_arr, flags=cv.IMREAD_COLOR)
+    return img
 
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:Wjc112299@127.0.0.1:3306/webtest'
-# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-# db = SQLAlchemy(app)
 
-@app.route('/index')
+@app.route('/posts/',methods=['post','get'])
 def index():
-    return 'Welcome My Friend!'
-
-
-UPLOAD_PATH = os.path.join(os.path.dirname(__file__), 'images')
-@app.route('/predict', methods=['GET', 'POST'])
-def upload_pic():
-    # 来获取多个上传文件
-    imgs = request.files.getlist("file_imgs")
-    urls = []
-    # 上传文件夹如果不存在则创建
-    if not os.path.exists(UPLOAD_PATH):
-        os.mkdir(UPLOAD_PATH)
-
-    filename = secure_filename(imgs[0].filename)
-    print(filename)
-    imgs[0].save(os.path.join(UPLOAD_PATH, filename))
-    b = tobase('images/' + filename)
-    print(b)
-    
-
-
-    respose = {
-        "code": 200,
-        "students": 5,
-        "img": b
+    data = request.get_data(as_text=True)  # 获取值
+    data=json.loads(data)
+    print(data)
+    alldata = data['data'].split(',')
+    besedata = alldata[1]
+    img = tocv2(besedata)
+    rebase,peoplenumbers = ssd_fimage_demo(img)
+    response={
+        "students":peoplenumbers,
+        "img":rebase
     }
-    return jsonify(respose)
-
-
-
-if __name__ == '__main__':
-    app.run()
+    
+    return jsonify(response)
