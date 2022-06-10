@@ -1,0 +1,23 @@
+server:
+   port: 8888
+   servlet:
+      context-path: /educational
+spring:
+   mvc:
+       static-path-pattern: /**
+   devtools:
+       restart:
+          enabled: true  #设置开启热部署
+          additional-paths: src/main/java #重启目录
+   datasource:
+       username: root
+       password: 1999120
+       url: jdbc:mysql://localhost:3306/data?zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+       driver-class-name: com.mysql.cj.jdbc.Driver
+       type: com.alibaba.druid.pool.DruidDataSource
+       initialSize: 5
+       minIdle: 5
+       maxWait: 60000
+mybatis-plus:
+   configuration:
+       log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

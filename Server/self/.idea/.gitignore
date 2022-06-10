@@ -1,0 +1,8 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Datasource local storage ignored files
+/../../../../../../../../:\项目实战整理\1. JAVA开发项目\21-09-13 学生教务管理系统\项目代码\IDEA+MyBatisPlus+SpringBoot\MySQL-Maven版\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
