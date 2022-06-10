@@ -69,6 +69,7 @@ DaSheeep:后端登录注册上传下载逻辑功能.
 #### 2.2.1 签到发布
 
 在上课时，教师可以发布签到，发布签到可以自定义时间。
+![image](https://user-images.githubusercontent.com/37702975/172979597-2ef62580-3ce1-4490-b778-9226a0ab6d58.png)
 
 #### 2.2.2 学生签到
 
@@ -140,10 +141,17 @@ classDiagram
 
 ### 2.3 基础信息管理模块
 基础信息管理，这是为了保证系统运行提供的管理功能，包括班级信息、用户信息、教室信息、课程信息等，管理员登陆之后可以在这里编辑这些信息，实现对校园基础设施信息的管理工作。
+![image](https://user-images.githubusercontent.com/37702975/172979814-c1551cd5-52a2-4237-bcfd-0fe8dcf7b19c.png)
 
 ### 2.4 日常工作处理模块
 
 日常办公管理，在这里管理员可以根据校园的实际情况发布一些通知或者是活动信息，教师和学生登陆到系统中之后可以看到这些信息，另外就是针对校园各个班级课程安排、上课时间等也可以在这里进行管理，学生登陆之后可以了解自己的课程安排情况，教师可以了解自己的工作安排。
+班级管理
+![image](https://user-images.githubusercontent.com/37702975/172979881-13d5f9e3-0337-48fb-ab09-6d7b806c9d85.png)
+用户管理
+![image](https://user-images.githubusercontent.com/37702975/172979929-2672a3b0-4e67-4533-8300-11511360cd5f.png)
+活动管理
+![image](https://user-images.githubusercontent.com/37702975/172979839-e2cb6665-1718-4f2c-bbd9-d732c70cc9b4.png)
 
 ### 2.5老师智能考勤模块
 
