@@ -30,7 +30,8 @@ DaSheeep:后端登录注册上传下载逻辑功能.
 ## 2 系统功能
 **功能图：**
 
-![QQ图片20220609233703](https://user-images.githubusercontent.com/53281427/172901619-a34e5c48-ba9f-4607-b0fe-d03b8e65b74e.png)
+![QQ图片20220609233703](https://user-images.githubusercontent.com/53281427/172990283-002493b7-3bd2-4814-8b82-8f8e2d13a86c.png)
+
 
 
 **系统架构图：**
