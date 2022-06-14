@@ -7,6 +7,7 @@ export default new Vuex.Store({
 	state:{
 		token: null,
 		menus: [],
+		user:{},
 	},
 	getters: {
 		
@@ -16,6 +17,9 @@ export default new Vuex.Store({
 		
 		getMenus: state => {
 			return state.menus
+		},
+		getUser: state => {
+			return state.user
 		},
 	},
 	mutations: {
@@ -31,5 +35,12 @@ export default new Vuex.Store({
 		clearMenus: (state) =>{
 			state.menus = [];
 		},
+		setUser: (state, user) =>{
+			state.user = user;
+		},
+		clearUser: (state) =>{
+			state.user = {};
+		},
 	}
+	
 })

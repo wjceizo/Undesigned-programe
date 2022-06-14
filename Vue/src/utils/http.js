@@ -18,7 +18,6 @@ service.interceptors.request.use(config => {
 		
 		config.data = qs.stringify(config.data,  { indices: false });
 	}
-	
 	return config;
 }, error => {
 	Promise.reject(error)
