@@ -23,8 +23,8 @@ def ssd_fimage_demo(needimg):
     # with open('object_detection_classes_coco.txt') as f:
     #     labels = [line.strip() for line in f.readlines()]
 
-    model_xml = "face-detection.xml"
-    model_bin = "face-detection.bin"
+    model_xml = "face-detection-retail-0005.xml"
+    model_bin = "face-detection-retail-0005.bin"
     net = ie.read_network(model=model_xml, weights=model_bin)
     input_blob = next(iter(net.input_info))
     out_blob = next(iter(net.outputs))
@@ -55,8 +55,8 @@ def ssd_fimage_demo(needimg):
             xmax = int(obj[5] * iw)
             ymax = int(obj[6] * ih)
             # print(labels[index])
-            cv.rectangle(src, (xmin, ymin), (xmax, ymax), (0, 255, 255), 2, 8)
-            cv.putText(src, "people" + str(obj[2]), (xmin, ymin), cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1, 8)
+            cv.rectangle(src, (xmin, ymin), (xmax, ymax), (255, 195, 0), 2, 8)
+            cv.putText(src, "person", (xmin, ymin-10), cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 255), 1, 8)
     # cv.imshow("People Detection", src)
     base64 = cv2_base64(src)
     # print(base64.decode("ascii"))
