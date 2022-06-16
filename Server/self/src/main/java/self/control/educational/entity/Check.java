@@ -10,7 +10,7 @@ import onway.org.cn.comm.web.entity.BaseEntity;
  * 数据实体类
  * 班级信息
  */
-@TableName(value = "check")
+@TableName(value = "qiandao")
 public class Check extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
