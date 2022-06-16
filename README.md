@@ -12,15 +12,13 @@
 
 ### 1.3 团队分工
 
-CherishTime1:文档撰写，类图，系统框架图，时序图等绘制。
-
+CherishTime1：文档撰写，类图，系统框架图，时序图等绘制。
 技术选择：文档撰写：markdown  绘图：Enterprise Architect + mermaid
 
 wjceizo: 后端数据库的连接，基础信息管理(如班级教室用户管理)，智能考勤系统（教师上传图片识别到班级学生模块）。
 技术选择：后端：Java+ SpringBoot+ MyBatisPlus + Mysql 识别模块：Python + Flask + Openvino
 
-agaogaolu:负责前端页面的制作
-
+agaogaolu：负责前端页面的制作，包括用户登陆界面、用户主界面、信息界面等。
 技术选择：Vue + ElementUI
 
 DaSheeep:后端通用功能（登录注册）和日常工作处理（各类安排和签到）功能.
