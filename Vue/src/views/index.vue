@@ -22,14 +22,15 @@
       <el-col :span="10">
         <el-card shadow="never">
           <el-upload
+            action=""
             class="upload-demo"
             ref="upload"
-            action="https://jsonplaceholder.typicode.com/posts/"
             accept=".jpg,.jpeg,.png,.JPG,.JPEG"
             :auto-upload="false"
             :on-change="getFile"
           >
             <div>
+              <h1 v-if="countVisible">当前上课人数：{{stuCount}}</h1>
               <div class="demo-image__placeholder">
                 <div class="block">
                   <!-- <el-image :src="'data:image/png;base64,'+imgurl"> -->
@@ -43,11 +44,11 @@
             </div>
             <!-- <el-button  size="small" type="primary">选取文件</el-button> -->
             <el-button
-              slot="trigger"
               style="margin-left: 10px;"
               size="small"
               type="primary"
-              @click="submitUpload">上传到服务器</el-button>
+              >上传到服务器</el-button
+            >
             <div slot="tip" class="el-upload__tip">
               只能上传jpg/png文件，且不超过500kb
             </div>
@@ -60,7 +61,7 @@
             <span class="fa fa-balance-scale"></span>
             人脸识别
           </div>
-          <div>请上传图片进行人脸验证！</div>
+          <div>请上传图片进行学生人数识别！</div>
         </el-card>
       </el-col>
     </el-row>
@@ -130,26 +131,27 @@
           </div>
           <div>
             <el-descriptions :column="1" border>
-              <el-descriptions-item>
+                            <el-descriptions-item>
                 <template slot="label">系统名称 </template>
                 智慧教室管理系统 V2.0.0
               </el-descriptions-item>
               <el-descriptions-item>
                 <template slot="label">开发环境 </template>
-                JDK8 + MySQL8.0 + Maven + IDEA
+                JDK8 + MySQL8.0 + Maven + IDEA + VSCode + Python
               </el-descriptions-item>
               <el-descriptions-item>
                 <template slot="label">开发技术 </template>
-                SpringBoot + MyBatisPlus + Vue + Element UI
+                SpringBoot + MyBatisPlus + Vue + Element UI + Python + Flask + OpenVINO
               </el-descriptions-item>
               <el-descriptions-item>
                 <template slot="label">运行环境 </template>
-                JDK8 + MySQL8.0 + Tomcat
+                JDK8 + MySQL8.0 + Tomcat + Python3.9
               </el-descriptions-item>
               <el-descriptions-item>
                 <template slot="label">开发团队 </template>
-                404NotFound
+                404NotFound(CherishTime,wjceizo,agaogaolu,DaSheeep)
               </el-descriptions-item>
+
             </el-descriptions>
           </div>
         </el-card>
@@ -190,8 +192,10 @@ export default {
       total_rooms: 0,
       list_activity: [],
       list_notice: [],
+      countVisible:false,
+      stuCount:0,
       imageUrl: "",
-      imgData: "",
+      imgData: require('../assets/add.png'),
       src:
         "https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg",
     };
@@ -249,17 +253,20 @@ export default {
     },
     submitUpload() {
       axios
-        .post("https://jsonplaceholder.typicode.com/posts/", {
-          data: this.imgData,
+        .post("http://127.0.0.1:5000/posts", {
+          data: this.imgData
         })
-        .then(function(response) {
-          this.console //具体操作
-            .log(response);
+        .then(response=> {
+          console.log(this.imgData);
+          this.stuCount = response.data.students;
+          this.countVisible = true;
+          this.imgData="data:image/jpeg;base64,"+response.data.img;
+        
         })
         .catch(function(error) {
           console.log(error);
         });
-    },
+    }
   },
 };
 </script>
