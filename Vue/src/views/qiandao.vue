@@ -69,6 +69,7 @@
 		},
 		created() {
 			ischeck(this.user.id).then(resp => {
+				console.log(resp)
 				if (resp.data.ischeck === false) {
 					this.dialogVisible = true;
 					this.timer = setInterval(() => {
